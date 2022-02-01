@@ -79,6 +79,7 @@ resource "aws_instance" "Abhi_instance_1" {
   key_name = "A_jenkins"
   tags = {
     Name = "public_inst_1"
+    "Schedule" = "Bangalore-office-hours"
   }
 }
 
@@ -89,5 +90,6 @@ resource "aws_instance" "Abhi_instance_2" {
   key_name = "A_jenkins"
   tags = {
     Name = "public_inst_2"
+    "Schedule" = "Bangalore-office-hours"
   }
 }
