@@ -76,7 +76,7 @@ resource "aws_instance" "Abhi_instance_1" {
   ami           = "ami-0a8b4cd432b1c3063"
   instance_type = "t2.micro"
   subnet_id = "${aws_subnet.dev-public-1.id}"
-  key_name = " A_jenkins"
+  key_name = "A_jenkins"
   tags = {
     Name = "public_inst_1"
   }
@@ -86,7 +86,7 @@ resource "aws_instance" "Abhi_instance_2" {
   ami           = "ami-0a8b4cd432b1c3063"
   instance_type = "t2.micro"
   subnet_id = "${aws_subnet.dev-public-2.id}"
-  key_name = " A_jenkins"
+  key_name = "A_jenkins"
   tags = {
     Name = "public_inst_2"
   }
