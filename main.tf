@@ -10,7 +10,7 @@ resource "aws_vpc" "dev" {
   enable_dns_hostnames = "true"
   enable_classiclink   = "false"
   tags = {
-    Name = "dev"
+    Name = "A_vpc"
   }
 }
 
@@ -22,7 +22,7 @@ resource "aws_subnet" "dev-public-1" {
   availability_zone       = "us-east-1a"
 
   tags = {
-    Name = "dev-public-1"
+    Name = "A_vpc-public-1"
   }
 }
 
@@ -33,7 +33,7 @@ resource "aws_subnet" "dev-public-2" {
   availability_zone       = "us-east-1a"
 
   tags = {
-    Name = "dev-public-2"
+    Name = "A_vpc-public-2"
   }
 }
 
@@ -42,7 +42,7 @@ resource "aws_internet_gateway" "dev-gw" {
   vpc_id = aws_vpc.dev.id
 
   tags = {
-    Name = "dev"
+    Name = "A_vpc"
   }
 }
 
@@ -55,7 +55,7 @@ resource "aws_route_table" "dev-public" {
   }
 
   tags = {
-    Name = "dev-public-1"
+    Name = "A_vpc-public-1"
   }
 }
 
